@@ -12,3 +12,12 @@ function toggleEventDetails(eventElement) {
 document.querySelectorAll('.event-item').forEach(item => {
     item.addEventListener('click', () => toggleEventDetails(item));
 });
+
+
+// script.js
+
+document.querySelector('.whatsapp-btn').addEventListener('click', function(event) {
+    if (!confirm('Are you sure you want to join the WhatsApp group?')) {
+        event.preventDefault(); // Prevents the link from opening if the user cancels
+    }
+});
